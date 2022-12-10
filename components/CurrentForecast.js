@@ -28,7 +28,7 @@ const CurrentForecast = ({ currentWeather }) => {
       <SecondaryInfoContainer>
         <Row>
           <DetailsBox>
-            <Label>Feels</Label>
+            <Label>Hissedilen</Label>
             <Details>
               {currentWeather.current &&
                 Math.round(currentWeather.current.feels_like)}
@@ -36,7 +36,7 @@ const CurrentForecast = ({ currentWeather }) => {
             </Details>
           </DetailsBox>
           <DetailsBox>
-            <Label>Low</Label>
+            <Label>Düşük</Label>
             <Details>
               {currentWeather.daily &&
                 Math.round(currentWeather.daily[0].temp.min)}
@@ -44,7 +44,7 @@ const CurrentForecast = ({ currentWeather }) => {
             </Details>
           </DetailsBox>
           <DetailsBox>
-            <Label>High</Label>
+            <Label>Yüksek</Label>
             <Details>
               {currentWeather.daily &&
                 Math.round(currentWeather.daily[0].temp.max)}
@@ -54,19 +54,19 @@ const CurrentForecast = ({ currentWeather }) => {
         </Row>
         <Row>
           <DetailsBox>
-            <Label>Wind</Label>
+            <Label>Rüzgar</Label>
             <Details>
               {currentWeather.current && currentWeather.current.wind_speed} m/s
             </Details>
           </DetailsBox>
           <DetailsBox>
-            <Label>Humidity</Label>
+            <Label>Nem</Label>
             <Details>
               {currentWeather.current && currentWeather.current.humidity}%
             </Details>
           </DetailsBox>
           <DetailsBox>
-            <Label>Rain</Label>
+            <Label>Yağmur</Label>
             <Details>
               {currentWeather.daily > 0 ? currentWeather.daily[0].rain : "0"} MM
             </Details>
@@ -104,7 +104,7 @@ const Description = styled.Text`
 
 const SecondaryInfoContainer = styled.View`
   background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 20px;
+  border-radius: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,11 +127,11 @@ const Timezone = styled.Text`
 `;
 
 const CurrentDegrees = styled.Text`
-  color: white;
+  color: #01007B;
   display: flex;
   justify-content: center;
   margin-top: 10px;
-  font-size: 60px;
+  font-size: 70px;
 `;
 
 const Row = styled.View`
@@ -148,12 +148,12 @@ const DetailsBox = styled.View`
 `;
 
 const Label = styled.Text`
-  font-size: 18px;
+  font-size: 25px;
 `;
 
 const Details = styled.Text`
-  color: black;
-  font-size: 15px;
+  color: #4E4F53;
+  font-size: 25px;
   text-transform: capitalize;
 `;
 

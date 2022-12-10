@@ -81,7 +81,7 @@ const App = () => {
                 }
               })
             ) : (
-              <NoWeather>No Weather to show</NoWeather>
+              <NoWeather>Gösterilecek Hava Durumu yok</NoWeather>
             )}
           </FutureForecastContainer>
         </ScrollView>
@@ -97,7 +97,7 @@ const Container = styled.View`
 
 const NoWeather = styled.Text`
   text-align: center;
-  color: white;
+  color: #4E4F53;
 `;
 
 const FutureForecastContainer = styled.View`
