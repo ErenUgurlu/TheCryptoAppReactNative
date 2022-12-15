@@ -4,7 +4,6 @@ import styled from "styled-components/native";
 const CurrentForecast = ({ currentWeather }) => {
   return (
     <CurrentView>
-      <Timezone>{currentWeather.timezone}</Timezone>
       <MainInfoContainer>
         <CurrentTempView>
           {currentWeather.current && (
@@ -28,7 +27,7 @@ const CurrentForecast = ({ currentWeather }) => {
       <SecondaryInfoContainer>
         <Row>
           <DetailsBox>
-            <Label>Hissedilen</Label>
+            <Label>Windchill</Label>
             <Details>
               {currentWeather.current &&
                 Math.round(currentWeather.current.feels_like)}
@@ -36,7 +35,7 @@ const CurrentForecast = ({ currentWeather }) => {
             </Details>
           </DetailsBox>
           <DetailsBox>
-            <Label>Düşük</Label>
+            <Label>Min</Label>
             <Details>
               {currentWeather.daily &&
                 Math.round(currentWeather.daily[0].temp.min)}
@@ -44,7 +43,7 @@ const CurrentForecast = ({ currentWeather }) => {
             </Details>
           </DetailsBox>
           <DetailsBox>
-            <Label>Yüksek</Label>
+            <Label>Max</Label>
             <Details>
               {currentWeather.daily &&
                 Math.round(currentWeather.daily[0].temp.max)}
@@ -54,19 +53,19 @@ const CurrentForecast = ({ currentWeather }) => {
         </Row>
         <Row>
           <DetailsBox>
-            <Label>Rüzgar</Label>
+            <Label>Wind</Label>
             <Details>
               {currentWeather.current && currentWeather.current.wind_speed} m/s
             </Details>
           </DetailsBox>
           <DetailsBox>
-            <Label>Nem</Label>
+            <Label>Humidity</Label>
             <Details>
               {currentWeather.current && currentWeather.current.humidity}%
             </Details>
           </DetailsBox>
           <DetailsBox>
-            <Label>Yağmur</Label>
+            <Label>Rain</Label>
             <Details>
               {currentWeather.daily > 0 ? currentWeather.daily[0].rain : "0"} MM
             </Details>
@@ -97,13 +96,13 @@ const MainInfoContainer = styled.View`
 `;
 
 const Description = styled.Text`
-  color: white;
+  color: #439A97;
   font-size: 15px;
   text-transform: capitalize;
 `;
 
 const SecondaryInfoContainer = styled.View`
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(203, 237, 213, 0.8);
   border-radius: 45px;
   display: flex;
   align-items: center;
@@ -119,7 +118,7 @@ const WeatherIcon = styled.Image`
 `;
 
 const Timezone = styled.Text`
-  color: white;
+  color: #62B6B7;
   display: flex;
   justify-content: center;
   margin-top: 10px;
@@ -127,7 +126,7 @@ const Timezone = styled.Text`
 `;
 
 const CurrentDegrees = styled.Text`
-  color: #01007B;
+  color: #439A97;
   display: flex;
   justify-content: center;
   margin-top: 10px;
@@ -139,7 +138,7 @@ const Row = styled.View`
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
-  color: black;
+  color: #62B6B7;
   padding: 10px 30px;
 `;
 

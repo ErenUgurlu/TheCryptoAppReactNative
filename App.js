@@ -81,7 +81,7 @@ const App = () => {
                 }
               })
             ) : (
-              <NoWeather>Gösterilecek Hava Durumu yok</NoWeather>
+              <NoWeather>No Weather to display</NoWeather>
             )}
           </FutureForecastContainer>
         </ScrollView>

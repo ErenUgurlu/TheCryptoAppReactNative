@@ -60,7 +60,7 @@ const Buttons = styled.Button`
 const SearchBy = styled.View`
   display: flex;
   flex-direction: row;
-  color: white;
+  color: #97DECE;
   margin-top: 10px;
   align-items: center;
   justify-content: flex-start;
@@ -69,14 +69,14 @@ const SearchBy = styled.View`
 `;
 
 const ButtonLabel = styled.Text`
-  color: white;
+  color: #97DECE;
   margin-right: 10px;
 `;
 
 const SearchCity = styled.TextInput`
   height: 50px;
   margin: 12px;
-  background-color: white;
+  background-color: #CBEDD5;
   padding: 15px;
   border-radius: 10px;
   width: 95%;

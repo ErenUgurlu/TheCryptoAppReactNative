@@ -16,11 +16,11 @@ const DailyForecast = ({ day, index }) => {
           }}
           resizeMode={"contain"} // cover or contain its upto you view look
         />
-        <Text>{day.weather[0].description}</Text>
+        <Text>{day.weather[0].description}</Text> 
       </IconTempView>
       <DegreeView>
         <Degree>{Math.round(day.temp.max)}°C</Degree>
-        <FeelsLike>Hissedilen {Math.round(day.feels_like.day)}°C</FeelsLike>
+        <FeelsLike>Windchill {Math.round(day.feels_like.day)}°C</FeelsLike>
       </DegreeView>
     </DayContainer>
   );
@@ -28,7 +28,7 @@ const DailyForecast = ({ day, index }) => {
 
 const DayContainer = styled.View`
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(151, 222, 206, 0.6);
   border-radius: 10px;
   margin: 10px;
   display: flex;
